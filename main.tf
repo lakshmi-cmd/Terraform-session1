@@ -6,13 +6,13 @@ provider "azurerm" {
 locals {
   custom_tags = {
     environment = "dev"
-    team = "support"
+    team = "terraform"
   }
 }
 
 resource "azurerm_resource_group" "app-rg"{
-    name     = var.app_server_rg
-    location = var.app_server_location
+    name     = "testrg"
+    location = "eastus"
 
     tags = local.custom_tags
       
